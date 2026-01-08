@@ -708,7 +708,7 @@ section {
 }
 
 /* Mobile */
-@media (max-width: 650px) {
+@media (max-width: 600px) {
   .cards {
     grid-template-columns: 1fr;
   }
