@@ -35,9 +35,8 @@ header {
 }
 
 .nav {
-  max-width: 1200px;
-  margin: auto;
-  padding: 15px 20px;
+  width: 100%;
+  padding: 15px clamp(20px, 4vw, 60px);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -205,8 +204,9 @@ section {
 }
 
 .container {
-  max-width: 1200px;
-  margin: auto;
+  width: 100%;
+  padding-left: clamp(16px, 4vw, 60px);
+  padding-right: clamp(16px, 4vw, 60px);
 }
 
 .section-title {
@@ -360,7 +360,7 @@ section {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
-  max-width: 1400 px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
