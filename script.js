@@ -50,3 +50,21 @@ function changeSlide() {
 /* avvio automatico */
 setInterval(changeSlide, intervalTime);
 
+// menu di navigazione mobile
+  const hamburger = document.getElementById("hamburger");
+  const navMenu = document.getElementById("nav-menu");
+  const navLinks = navMenu.querySelectorAll("a");
+
+  // Apri / chiudi menu
+  hamburger.addEventListener("click", () => {
+    navMenu.classList.toggle("open");
+  });
+
+  // Chiudi menu quando clicchi una voce
+  navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      navMenu.classList.remove("open");
+    });
+  });
+
+
