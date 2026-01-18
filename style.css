@@ -356,7 +356,6 @@ section {
   line-height: 1.7;
 }
 
-
 .cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -390,21 +389,23 @@ section {
   box-shadow: 0 20px 45px rgba(0,0,0,.45);
 }
 
+
+
 .card .icon {
   font-size: 32px;
   margin-bottom: 15px;
   color: #60a5fa;
 }
-
 .card-marzo {
   grid-row: 2;
-  grid-column: 3: 
+  grid-column: 2;
 }
 
 .card-center {
   grid-row: 2;
-  grid-column:3; 
+  grid-column: 3;
 }
+
 
 .card span {
   color: #60a5fa;
@@ -717,7 +718,7 @@ section {
 }
 
 /* Mobile */
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .cards {
     grid-template-columns: 1fr;
   }
