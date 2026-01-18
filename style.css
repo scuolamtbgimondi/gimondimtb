@@ -6,6 +6,11 @@
   --muted: #94a3b8;
 }
 
+.logo img {
+  height: 60px;
+  width: auto;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -33,10 +38,61 @@ header {
   background: rgba(15, 23, 42, 0.95);
   z-index: 100;
 }
+/* ===== HAMBURGER ===== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 26px;
+  height: 3px;
+  background: #e5e7eb;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* ===== MOBILE MENU ===== */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+.nav ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: rgba(15, 23, 42, 0.98);
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+
+  max-height: 0;
+  overflow: hidden;
+  padding: 0;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+}
+
+.nav ul.open {
+  max-height: 400px;
+  padding: 30px 0;
+}
+
+
+  .nav ul.open {
+    max-height: 400px;
+  }
+}
+
 
 .nav {
   width: 100%;
   padding: 15px clamp(20px, 4vw, 60px);
+  margin: auto;
+  padding: 15px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -207,6 +263,7 @@ section {
   width: 100%;
   padding-left: clamp(16px, 4vw, 60px);
   padding-right: clamp(16px, 4vw, 60px);
+  margin: auto;
 }
 
 .section-title {
@@ -722,5 +779,20 @@ section {
   .cards {
     grid-template-columns: 1fr;
   }
+
+  .card {
+    min-height: auto;
+    padding: 28px 22px;
+  }
+  .card-marzo,
+  .card-center {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+}
+
+body {
+  overflow-x: hidden;
 }
 
